@@ -1,0 +1,85 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--   AppTheme -->
+    <style name="AppClassic"  parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/md_classic_background</item>
+        <item name="colorPrimaryDark">@color/md_classic_background</item>
+        <item name="colorAccent">@color/md_classic_accent</item>
+    </style>
+
+    <!--   ThemeDialog  -->
+    <style name="ThemeDialog" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColor">?ns_title</item>
+        <item name="android:textColorAlertDialogListItem">?ns_title</item>
+        <item name="android:textColorSecondary">?ns_title</item>
+        <!-- Used for the background -->
+        <item name="android:background">?ns_dialog_bg</item>
+        <!-- Used for the Button -->
+        <item name="buttonBarNegativeButtonStyle">@style/ButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/ButtonStyle</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">?ns_title</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_down_dialog</item>
+    </style>
+
+    <style name="RatingBar_white" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">?ns_title_sub</item>
+        <item name="colorControlActivated">?ns_accent</item>
+    </style>
+
+    <style name="RatingBarDialog" parent="Theme.AppCompat">
+        <item name="colorControlNormal">?ns_title_sub</item>
+        <item name="colorControlActivated">#FF9800</item>
+    </style>
+
+    <style name="TextViewNormal" parent="">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="colorAccent">@color/white</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="PopupMenuLight" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="PopupMenuDark" parent="ThemeOverlay.AppCompat.Dark"/>
+
+    <style name="CircularProgressWhite" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="PinWidget.PinView" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@null</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textCursorDrawable">@drawable/pv_invisible_image</item>
+        <item name="android:textSelectHandle">@drawable/pv_invisible_image</item>
+        <item name="android:textSelectHandleLeft">@drawable/pv_invisible_image</item>
+        <item name="android:textSelectHandleRight">@drawable/pv_invisible_image</item>
+    </style>
+
+
+    <!-- CardMultilineWidget  -->
+    <style name="AppTheme.CardTheme" parent="@android:style/Theme.DeviceDefault">
+        <item name="android:background">?ns_bg_sub</item>
+        <item name="editTextStyle">@style/EditTextOverride</item>
+        <item name="android:editTextStyle">@style/EditTextOverride</item>
+    </style>
+
+    <style name="EditTextOverride" parent="@android:style/Widget.EditText">
+        <!-- Used for the title and text -->
+        <item name="android:textColor">?ns_title</item>
+        <item name="android:textColorHint">?ns_title_sub</item>
+        <item name="android:textColorSecondary">?ns_title</item>
+    </style>
+
+</resources>

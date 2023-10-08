@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?ns_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?ns_bg"
+        app:navigationIcon="@drawable/ic_close"
+        app:navigationIconTint="?ns_bg_tint"
+        app:title="@string/payment_option"
+        app:titleCentered="true"
+        app:titleTextColor="?ns_bg_tint" />
+
+    <View
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="?ns_border" />
+
+    <com.tenbis.library.views.CompactCreditCardInput
+        android:id="@+id/compact_credit_card_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        app:card_background="?ns_bg_sub"
+        app:card_cvv_background_color="?ns_bg_sub"
+        app:card_date_background_color="?ns_bg_sub"
+        app:card_number_background_color="?ns_bg_sub"
+        app:hint_color="?ns_accent"
+        app:label_text_color="?ns_title"
+        app:text_color="?ns_title" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/compact_credit_card_input"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:includeFontPadding="false"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text="@string/pay_via"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:backgroundTint="#E91E63" />
+
+</RelativeLayout>

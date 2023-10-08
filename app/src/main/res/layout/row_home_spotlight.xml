@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_190sdp"
+    android:id="@+id/rl_spotlight_click"
+    android:padding="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:background="@drawable/bg_spotlight_card"
+        android:id="@+id/rl_spotlight_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_1sdp">
+
+        <LinearLayout
+            android:id="@+id/ll_spotlight_thumbnail_3"
+            android:background="?ns_bg_sub"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="100"
+            android:baselineAligned="false">
+
+            <androidx.nemosofts.view.RoundedImageView
+                android:id="@+id/iv_spotlight_thumbnail_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/material_design_default"
+                app:riv_corner_radius_top_left="@dimen/_5sdp"
+                app:riv_corner_radius_bottom_left="@dimen/_5sdp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="50"
+                android:visibility="visible"
+                android:weightSum="100">
+
+                <androidx.nemosofts.view.RoundedImageView
+                    android:id="@+id/iv_spotlight_thumbnail_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="50"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/material_design_default"
+                    app:riv_corner_radius_top_right="@dimen/_5sdp"/>
+
+                <androidx.nemosofts.view.RoundedImageView
+                    android:id="@+id/iv_spotlight_thumbnail_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="50"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/material_design_default"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    app:riv_corner_radius_bottom_right="@dimen/_5sdp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.nemosofts.view.RoundedImageView
+            android:visibility="gone"
+            android:id="@+id/iv_spotlight_thumbnail_full_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/material_design_default"
+            app:riv_corner_radius="@dimen/_5sdp" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_spotlight_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_bestseller"
+            android:backgroundTint="#FFC400"
+            android:paddingStart="10dp"
+            android:text="Rs 500"
+            android:textAlignment="viewStart"
+            android:paddingEnd="20dp"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <View
+        android:background="@drawable/bg_spotlight"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+
+    <TextView
+        android:id="@+id/tv_spotlight_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rl_spotlight_top"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_toStartOf="@+id/tv_spotlight_price_date"
+        android:maxLines="1"
+        android:textAlignment="viewStart"
+        android:text="@string/app_name"
+        android:textColor="#FFC400"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_above="@+id/pin"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/ic_spotlight"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:contentDescription="@string/todo" />
+
+    <LinearLayout
+        android:id="@+id/pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_above="@+id/tv_spotlight_text"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/id_pin"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_pin"
+            app:tint="#FFC400"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/tv_spotlight_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textAlignment="viewStart"
+            android:textColor="#FFC400"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginStart="@dimen/_5sdp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_spotlight_price_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFC400"
+        android:layout_alignParentEnd="true"
+        android:text="4 hours ago"
+        android:textAlignment="textEnd"
+        android:textSize="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_alignBottom="@+id/rl_spotlight_top"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

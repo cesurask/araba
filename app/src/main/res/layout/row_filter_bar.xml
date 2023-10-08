@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_40sdp"
+    android:background="?ns_bg_sub"
+    android:orientation="horizontal"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:id="@+id/ll_filter_city"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="40">
+
+        <ImageView
+            android:padding="@dimen/_1sdp"
+            android:src="@drawable/ic_maps"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:contentDescription="@string/todo"
+            app:tint="?ns_title" />
+
+        <TextView
+            android:id="@+id/tv_city_filter"
+            android:textColor="?ns_title"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="@string/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_width="@dimen/_2sdp"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_line"
+        android:backgroundTint="?ns_border"/>
+
+    <LinearLayout
+        android:id="@+id/ll_filter_cat"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="45">
+
+        <ImageView
+            android:src="@drawable/ic_menu_white"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:contentDescription="@string/todo"
+            app:tint="?ns_title"/>
+
+        <TextView
+            android:id="@+id/tv_category_filter"
+            android:textColor="?ns_title"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="@string/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_width="@dimen/_2sdp"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_line"
+        android:backgroundTint="?ns_border"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_filter_sort"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="14">
+
+        <ImageView
+            android:id="@+id/iv_sort"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/ic_filter_new"
+            app:tint="?ns_title"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/todo"/>
+
+        <ImageView
+            android:id="@+id/iv_filter_sort"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_alignTop="@+id/iv_sort"
+            android:layout_alignEnd="@+id/iv_sort"
+            android:src="@drawable/bg_filter_sort"
+            android:contentDescription="@string/todo"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

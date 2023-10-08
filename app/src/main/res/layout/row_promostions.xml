@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:background="@drawable/bg_pay_normal"
+    android:orientation="vertical"
+    android:id="@+id/ll_bg_daily">
+
+    <RelativeLayout
+        android:id="@+id/rl_daily_up_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:layout_margin="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/iv_speed"
+            android:src="@drawable/ic_speed"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/todo" />
+
+        <CheckBox
+            android:id="@+id/cb_speed"
+            android:buttonTint="?ns_title_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_speed" />
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="?ns_title"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/iv_speed"
+            android:text="Daily Bump Up"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_speed_pri"
+            android:layout_marginTop="2dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="?ns_title_sub"
+            android:text="From Rs 600"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:textAlignment="viewStart"
+            android:id="@+id/tv_speed_text"
+            android:layout_below="@+id/tv_speed"
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="?ns_title_sub"
+            android:textSize="15sp"
+            android:layout_toEndOf="@+id/iv_speed"
+            android:text="Get a fresh start every day and get up to 10 times more responses!"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:paddingBottom="@dimen/_10sdp"
+        android:visibility="visible"
+        android:id="@+id/ll_pro_opn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:padding="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:textAlignment="viewStart"
+                android:id="@+id/rb_group_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/tv_group_1"
+                android:text="@string/app_name"
+                android:textColor="?ns_title" />
+
+            <TextView
+                android:layout_marginTop="6dp"
+                android:id="@+id/tv_group_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:text="@string/app_name"
+                android:textAlignment="viewEnd"
+                android:textColor="?colorAccent"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:padding="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb_group_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_toStartOf="@+id/tv_group_2"
+                android:text="@string/app_name"
+                android:textAlignment="viewStart"
+                android:textColor="?ns_title" />
+
+            <TextView
+                android:layout_marginTop="6dp"
+                android:id="@+id/tv_group_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:text="@string/app_name"
+                android:textAlignment="viewEnd"
+                android:textColor="?colorAccent"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:padding="2dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:textAlignment="viewStart"
+                android:id="@+id/rb_group_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/tv_group_3"
+                android:text="@string/app_name"
+                android:textColor="?ns_title" />
+
+            <TextView
+                android:layout_marginTop="6dp"
+                android:id="@+id/tv_group_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:text="@string/app_name"
+                android:textAlignment="viewEnd"
+                android:textColor="?colorAccent"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

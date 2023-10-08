@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?ns_bg_sub"
+    tools:context=".activity.FilterActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?ns_bg"
+        app:navigationIcon="@drawable/ic_close"
+        app:navigationIconTint="?ns_bg_tint"
+        app:title="Filters"
+        app:titleCentered="true"
+        app:titleTextColor="?ns_bg_tint" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/iv_change"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/bar_selector"
+            android:contentDescription="@string/todo"
+            android:padding="@dimen/_7sdp"
+            android:src="@drawable/ic_cached"
+            app:tint="?ns_title" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:id="@+id/filter_menu"
+        android:layout_width="match_parent"
+        android:background="?ns_bg"
+        android:layout_height="@dimen/_45sdp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/tv_backspace"
+            android:scaleType="centerCrop"
+            android:padding="@dimen/_10sdp"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:src="@drawable/ic_backspace_black"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/todo"
+            app:tint="?ns_title" />
+
+        <TextView
+            android:id="@+id/tv_filter_title_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textAlignment="viewStart"
+            android:textColor="?ns_title"
+            android:textSize="@dimen/_14ssp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="?ns_border" />
+
+    <LinearLayout
+        android:id="@+id/filter_menu_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filter_menu"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/bg_filter_cat_all">
+
+        <TextView
+            android:id="@+id/tv_filter_title_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_15sdp"
+            android:text="@string/app_name"
+            android:textAlignment="viewStart"
+            android:textColor="?ns_bg_tint"
+            android:textSize="@dimen/_15ssp"
+            android:maxLines="1"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/filter_menu_all"
+        android:layout_above="@id/bottom_filter"
+        android:id="@+id/rv_filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.nemosofts.view.SmoothProgressBar
+        android:id="@+id/pb_filter"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        app:cpb_color="#FFee44"
+        app:cpb_colors="@array/progress_colors"
+        app:cpb_max_sweep_angle="300"
+        app:cpb_min_sweep_angle="10"
+        app:cpb_rotation_speed="1.0"
+        app:cpb_stroke_width="@dimen/_4sdp"
+        app:cpb_sweep_speed="1.0" />
+
+    <LinearLayout
+        android:id="@+id/bottom_filter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_43sdp"
+        android:layout_alignParentBottom="true"
+        android:background="?ns_bg"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="100">
+
+        <Button
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:id="@+id/button_filter_remove"
+            android:background="@color/color_filter_remove"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="match_parent"
+            android:text="Filter remove"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:drawableStart="@drawable/ic_filter" />
+
+        <View
+            android:layout_width="@dimen/_2sdp"
+            android:layout_height="match_parent"
+            android:background="?ns_bg_sub" />
+
+        <Button
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:id="@+id/button_filter"
+            android:background="#2196F3"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:text="Apply Filter"
+            android:textColor="#FFFFFF"
+            android:drawableStart="@drawable/ic_filter" />
+
+    </LinearLayout>
+
+</RelativeLayout>

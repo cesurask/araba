@@ -1,0 +1,99 @@
+plugins {
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'nemosofts.classified'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.arabaevmotor.app"
+        minSdk 22
+        targetSdk 33
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildTypes.each {
+        it.buildConfigField 'String', 'BASE_URL', BASE_URL
+        it.buildConfigField 'String', 'API_NAME', API_NAME
+        it.buildConfigField 'String', 'ENC_KEY', ENC_KEY
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    implementation files('libs/library.aar')
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation("com.squareup.okhttp3:okhttp:4.11.0") //4.11.0
+    implementation 'com.google.android.play:core:1.10.3'
+    implementation "androidx.recyclerview:recyclerview:1.3.1"
+    // Analytics
+    implementation platform('com.google.firebase:firebase-bom:32.1.1')
+    implementation 'com.google.firebase:firebase-analytics:21.3.0'
+    // Login
+    implementation 'com.google.android.gms:play-services-auth:20.6.0' //20.3.0
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    implementation 'com.google.firebase:firebase-auth:22.1.1'
+    // In app Messaging
+    implementation 'com.google.firebase:firebase-inappmessaging-display:20.3.3'
+    // Push notification
+    implementation 'com.onesignal:OneSignal:4.8.5'
+    // Encrypt and Decrypt
+    implementation 'com.yakivmospan:scytale:1.0.1'
+    // Image Library
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    // Palette
+    implementation 'androidx.palette:palette:1.0.0'
+    // Clear cache data
+    implementation 'commons-io:commons-io:2.11.0'
+
+    implementation 'com.romandanylyk:pageindicatorview:1.0.3'
+    implementation 'com.tiagosantos:enchantedviewpager:1.1.0'
+    implementation 'me.grantland:autofittextview:0.2.1'
+
+    // Payment
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+    implementation 'com.stripe:stripe-android:20.27.0'
+    implementation 'co.paystack.android:paystack:3.3.2'
+    implementation 'com.github.10bis:compactCreditInput:2.0.2'
+
+    // Mobile advertising
+    implementation 'com.wortise:android-sdk:1.4.1'
+    implementation 'com.startapp:inapp-sdk:4.11.0'
+    implementation 'com.applovin:applovin-sdk:11.11.3'
+    implementation 'com.ironsource.sdk:mediationsdk:7.3.0.1'
+    implementation 'com.ironsource.adapters:facebookadapter:4.3.41'
+    implementation 'com.facebook.android:facebook-android-sdk:16.2.0'
+    implementation 'com.facebook.infer.annotation:infer-annotation:0.18.0'
+    implementation 'com.google.ads.mediation:facebook:6.15.0.0'
+    implementation 'com.google.android.gms:play-services-ads:22.3.0'
+    implementation 'com.google.android.ads.consent:consent-library:1.0.8'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
